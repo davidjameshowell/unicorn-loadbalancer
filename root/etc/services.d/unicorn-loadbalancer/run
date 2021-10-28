@@ -1,0 +1,1 @@
+exec s6-setuidgid abc /bin/sh -c 'npm start --prefix=/opt/UnicornLoadBalancer'

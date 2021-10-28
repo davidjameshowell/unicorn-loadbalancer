@@ -11,6 +11,6 @@ RUN apk add -U git \
     && cd UnicornLoadBalancer \
     && git checkout "${UnicornLoadBalancerGitHash}" \
     && npm install \
-    && chmod a+x /etc/services.d/*/* \
+    && chmod a+x /etc/services.d/unicorn-loadbalancer/run \
     && apk del git              \
     && rm -rf /tmp/* /var/cache/apk/*

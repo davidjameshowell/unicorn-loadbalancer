@@ -8,8 +8,8 @@ RUN apk add -U git \
     && mkdir -p /opt \
     && cd /opt \
     && git clone https://github.com/UnicornTranscoder/UnicornLoadBalancer.git \
-    && git checkout "${UnicornLoadBalancerGitHash}}" \
     && cd UnicornLoadBalancer \
+    && git checkout "${UnicornLoadBalancerGitHash}}" \
     && npm install \
     && chmod a+x /etc/services.d/*/* \
     && apk del git              \

@@ -10,6 +10,7 @@ RUN apk add -U git \
     && git clone https://github.com/UnicornTranscoder/UnicornLoadBalancer.git \
     && cd UnicornLoadBalancer \
     && git checkout "${UnicornLoadBalancerGitHash}" \
+    && rm package-lock.json && sed -i 's/"sqlite3": "^4.1.0",/"sqlite3": "5.0.2",/' package.json \
     && npm install \
     && chmod a+x /etc/services.d/unicorn-loadbalancer/run \
     && apk del git              \

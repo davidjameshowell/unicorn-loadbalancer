@@ -1,4 +1,4 @@
-FROM oznu/s6-node:12.19.0-amd64
+FROM oznu/s6-node:14.18.1-amd64
 
 ARG UnicornLoadBalancerGitHash="a2713845431002379a2c7279e276bb02622bf171"
 
